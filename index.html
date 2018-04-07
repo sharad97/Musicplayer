@@ -8,7 +8,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
 
-	<script src="js/music-data.js"></script>
+	<script src="music-data.js"></script>
 
 	<style>
 		.overlay {
@@ -324,7 +324,7 @@ clipPath.append("circle")
 nodes.append("image")
 	.attr("x", "0")
 	.attr("y", "0")
-	.attr("xlink:href", function(d) { return "MusicDataset/"+ d.id + ".jpg" })
+	.attr("xlink:href", function(d) { return "../MusicDataset/"+ d.id + ".jpg" })
 	.attr("height", function(d) { return (d.r) * 2; })
 	.attr("width", function(d) { return (d.r) * 2; })
 	.attr("clip-path", "url(#cut-off-bottom)")
@@ -398,7 +398,7 @@ function generateAudioElements() {
 	  		track = new Audio(),
 				audioElement = document.createElement("source");
 		track.setAttribute("id", "audio"+id);
-		audioElement.setAttribute("src", "MusicDataset/"+id+".mp3");
+		audioElement.setAttribute("src", "../MusicDataset/"+id+".mp3");
 
 		track.addEventListener('ended', function(e) {
 			if (DEBUG) console.log("ENDED event "+this.id)
